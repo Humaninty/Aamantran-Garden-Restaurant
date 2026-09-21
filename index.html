@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description"
+content="Aamantran Garden Restaurant, Nanded — menu, photos, location and contact.">
+
+<title>Aamantran Garden Restaurant | Nanded</title>
+
+<style>
+:root{
+  --bg:#fbf8f0;
+  --ink:#172018;
+  --muted:#687067;
+  --gold:#d3914e;
+  --deep:#17231b;
+  --line:#e7dfd0;
+  --white:#fff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+  line-height:1.55;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.wrap{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fbf8f0ee;
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-weight:950;
+  font-size:18px;
+}
+
+.brand i{
+  color:var(--gold);
+  font-style:normal;
+}
+
+.links{
+  display:flex;
+  gap:25px;
+  font-size:14px;
+  font-weight:800;
+}
+
+.links a:hover{
+  color:#a45e29;
+}
+
+/* HERO */
+
+.hero{
+  min-height:690px;
+  color:white;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+
+  background-image:
+    linear-gradient(90deg,#101812e8,#10181288),
+    url('https://static.goto-where.com/105518-albums-1.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(
+    circle at 80% 20%,
+    #d3914e44,
+    transparent 30%
+  );
+}
+
+.heroIn{
+  position:relative;
+  z-index:2;
+  padding:100px 0;
+  max-width:800px;
+}
+
+.pill{
+  display:inline-block;
+  padding:8px 13px;
+  border:1px solid #ffffff55;
+  border-radius:999px;
+  background:#ffffff14;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.8px;
+}
+
+.hero h1{
+  font-size:clamp(50px,8vw,90px);
+  line-height:.92;
+  letter-spacing:-4px;
+  margin:22px 0;
+}
+
+.hero p{
+  font-size:19px;
+  color:#e8ece7;
+  max-width:650px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  padding:13px 18px;
+  border-radius:12px;
+  font-weight:900;
+  border:1px solid transparent;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.gold{
+  background:var(--gold);
+  color:#fff;
+}
+
+.outline{
+  border-color:#ffffff66;
+  color:white;
+  background:#ffffff12;
+}
+
+/* SECTIONS */
+
+section{
+  padding:88px 0;
+}
+
+.eyebrow{
+  color:#a45e29;
+  text-transform:uppercase;
+  font-weight:950;
+  font-size:11px;
+  letter-spacing:2.3px;
+  margin-bottom:10px;
+}
+
+h2{
+  font-size:clamp(34px,5vw,55px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  margin:0;
+}
+
+.head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:36px;
+}
+
+.head p{
+  max-width:520px;
+  color:var(--muted);
+}
+
+/* CARDS */
+
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 12px 35px #24180b0b;
+}
+
+.icon{
+  font-size:30px;
+}
+
+.card h3{
+  margin:10px 0 5px;
+  font-size:20px;
+}
+
+.card p{
+  margin:0;
+  color:var(--muted);
+}
+
+/* ABOUT */
+
+.about{
+  background:#f0ecdf;
+}
+
+.aboutGrid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:45px;
+  align-items:center;
+}
+
+.photo{
+  min-height:470px;
+  border-radius:28px;
+
+  background-image:
+    url('https://static.goto-where.com/105518-albums-1.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+  box-shadow:0 25px 60px #0002;
+}
+
+.facts{
+  display:grid;
+  gap:13px;
+  margin:24px 0;
+}
+
+.fact{
+  display:flex;
+  gap:11px;
+  font-weight:750;
+}
+
+.rating{
+  padding:18px;
+  border:1px solid var(--line);
+  background:white;
+  border-radius:17px;
+}
+
+.stars{
+  letter-spacing:3px;
+  color:#d3914e;
+  font-size:21px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:15px;
+}
+
+.g1{
+  min-height:440px;
+  border-radius:24px;
+
+  background:
+    url('https://static.goto-where.com/105518-albums-1.jpg')
+    center/cover;
+}
+
+.gcol{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:15px;
+}
+
+.g2,
+.g3{
+  border-radius:24px;
+  min-height:210px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:20px;
+
+  background:linear-gradient(
+    145deg,
+    #344235,
+    #b87945
+  );
+
+  color:white;
+}
+
+.g3{
+  background:linear-gradient(
+    145deg,
+    #b87945,
+    #26352a
+  );
+}
+
+.g2 b,
+.g3 b{
+  font-size:18px;
+}
+
+.note{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:10px;
+}
+
+/* MENU */
+
+.menuTabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+
+.tab{
+  border:1px solid var(--line);
+  background:white;
+  padding:9px 13px;
+  border-radius:999px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.tab.active{
+  background:var(--deep);
+  color:white;
+}
+
+.menuGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.dish{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:18px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+
+.dish small{
+  display:block;
+  color:var(--muted);
+  margin-top:3px;
+}
+
+.price{
+  font-weight:950;
+  color:#a45e29;
+  white-space:nowrap;
+}
+
+/* CTA */
+
+.cta{
+  background:var(--deep);
+  color:white;
+  border-radius:30px;
+  padding:50px;
+}
+
+.cta p{
+  color:#ccd4ca;
+  max-width:600px;
+}
+
+.contact{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:18px;
+  margin-top:20px;
+}
+
+.box{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:28px;
+}
+
+.info{
+  display:grid;
+  gap:18px;
+}
+
+.info span{
+  display:block;
+  color:var(--muted);
+}
+
+form{
+  display:grid;
+  gap:11px;
+}
+
+input,
+textarea{
+  font:inherit;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fffdf8;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.map{
+  height:170px;
+  margin-top:18px;
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dae4d5,
+      #f1e4d0
+    );
+
+  display:grid;
+  place-items:center;
+  font-weight:900;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.foot{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+/* FLOATING WHATSAPP */
+
+.float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+
+  background:#1d8050;
+  color:white;
+
+  padding:14px 18px;
+  border-radius:999px;
+
+  font-weight:950;
+
+  z-index:60;
+
+  box-shadow:0 15px 35px #0003;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .links{
+    display:none;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .hero h1{
+    letter-spacing:-2.5px;
+  }
+
+  .grid3,
+  .aboutGrid,
+  .contact,
+  .menuGrid,
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gcol{
+    grid-template-rows:220px 220px;
+  }
+
+  .head{
+    display:block;
+  }
+
+  .head p{
+    margin-top:13px;
+  }
+
+  .cta{
+    padding:35px 25px;
+  }
+
+  .foot{
+    display:block;
+  }
+
+  .foot div+div{
+    margin-top:8px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="wrap nav">
+
+    <a class="brand" href="#top">
+      Aamantran <i>Garden</i>
+    </a>
+
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#photos">Photos</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero" id="top">
+
+  <div class="wrap heroIn">
+
+    <span class="pill">
+      NANDED • PURE VEGETARIAN RESTAURANT
+    </span>
+
+    <h1>
+      Good food.<br>
+      Beautiful evenings.
+    </h1>
+
+    <p>
+      A premium website concept for Aamantran Garden Restaurant —
+      designed to turn searches into visits, enquiries and calls.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn gold" href="#menu">
+        Explore Menu
+      </a>
+
+      <a class="btn outline" href="#contact">
+        Contact Restaurant
+      </a>
+
+      <a
+        class="btn outline"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=Aamantran+Garden+Restaurant+Chatrapati+Chowk+More+Chowk+Road+Nanded">
+        📍 Google Maps
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ABOUT / EXPERIENCE -->
+
+<section id="about">
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div>
+
+        <div class="eyebrow">
+          The experience
+        </div>
+
+        <h2>
+          A stronger first impression online.
+        </h2>
+
+      </div>
+
+      <p>
+        The current public listings show Aamantran Garden Restaurant
+        at Chatrapati Chowk / More Chowk Road in Nanded, with a
+        Google rating around 4.6 and more than 1,000 reviews.
+      </p>
+
+    </div>
+
+
+    <div class="grid3">
+
+      <div class="card">
+
+        <div class="icon">🌿</div>
+
+        <h3>
+          Garden atmosphere
+        </h3>
+
+        <p>
+          Bring the restaurant's ambience online with large
+          photography and an experience-first layout.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">🥗</div>
+
+        <h3>
+          Pure vegetarian
+        </h3>
+
+        <p>
+          Public listings describe a broad vegetarian menu across
+          Indian, Chinese, pizza and other categories.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">📲</div>
+
+        <h3>
+          One-tap contact
+        </h3>
+
+        <p>
+          Visitors can call, open Maps or send an enquiry on
+          WhatsApp directly from the website.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+  <div class="wrap aboutGrid">
+
+    <div class="photo"></div>
+
+    <div>
+
+      <div class="eyebrow">
+        About Aamantran
+      </div>
+
+      <h2>
+        Let the place sell the experience.
+      </h2>
+
+
+      <div class="facts">
+
+        <div class="fact">
+          ✓ Outdoor / garden-style seating
+        </div>
+
+        <div class="fact">
+          ✓ Family dining & celebrations
+        </div>
+
+        <div class="fact">
+          ✓ Delivery & takeaway presence
+        </div>
+
+        <div class="fact">
+          ✓ Easy Google Maps directions
+        </div>
+
+      </div>
+
+
+      <div class="rating">
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <b>
+          Google rating: 4.6 / 5
+        </b>
+
+        <br>
+
+        <span style="color:var(--muted)">
+          Public listing snapshot checked September 2026
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PHOTOS -->
+
+<section id="photos">
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div>
+
+        <div class="eyebrow">
+          Photo story
+        </div>
+
+        <h2>
+          Show the ambience before they arrive.
+        </h2>
+
+      </div>
+
+      <p>
+        One public photo is used here as a demo reference.
+        Before a paid launch, replace it with owner-approved
+        photos or photos the restaurant has permission to use.
+      </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <div class="g1"></div>
+
+
+      <div class="gcol">
+
+        <div class="g2">
+
+          <div>
+
+            <b>
+              Food photography
+            </b>
+
+            <br>
+
+            <span>
+              Replace with owner-approved dish photos
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="g3">
+
+          <div>
+
+            <b>
+              Celebrations & seating
+            </b>
+
+            <br>
+
+            <span>
+              Show birthdays, family dinners and garden ambience
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="note">
+      Demo photo source: a public Aamantran Garden Restaurant
+      listing. Not presented as owned/licensed website media.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+  <div class="wrap">
+
+    <div class="head">
+
+      <div>
+
+        <div class="eyebrow">
+          Selected menu
+        </div>
+
+        <h2>
+          A menu customers can actually browse.
+        </h2>
+
+      </div>
+
+      <p>
+        Selected items and prices below are based on a current
+        public online-menu listing. Confirm the restaurant's
+        current printed menu and prices with the owner before
+        publishing.
+      </p>
+
+    </div>
+
+
+    <div class="menuTabs">
+
+      <button
+        class="tab active"
+        onclick="filterMenu('all',this)">
+        Popular
+      </button>
+
+      <button
+        class="tab"
+        onclick="filterMenu('starter',this)">
+        Starters
+      </button>
+
+      <button
+        class="tab"
+        onclick="filterMenu('main',this)">
+        Main Course
+      </button>
+
+      <button
+        class="tab"
+        onclick="filterMenu('rice',this)">
+        Rice & Noodles
+      </button>
+
+    </div>
+
+
+    <div class="menuGrid" id="menuGrid">
+
+      <div class="dish starter">
+
+        <div>
+          <b>Veg Spring Roll</b>
+          <small>Chinese starter</small>
+        </div>
+
+        <div class="price">
+          ₹250
+        </div>
+
+      </div>
+
+
+      <div class="dish starter">
+
+        <div>
+          <b>Paneer Tikka</b>
+          <small>Tandoor starter</small>
+        </div>
+
+        <div class="price">
+          ₹303
+        </div>
+
+      </div>
+
+
+      <div class="dish starter">
+
+        <div>
+          <b>Peri Peri Fries</b>
+          <small>Continental starter</small>
+        </div>
+
+        <div class="price">
+          ₹170
+        </div>
+
+      </div>
+
+
+      <div class="dish starter">
+
+        <div>
+          <b>Veg Manchurian</b>
+          <small>Chinese starter</small>
+        </div>
+
+        <div class="price">
+          ₹222
+        </div>
+
+      </div>
+
+
+      <div class="dish main">
+
+        <div>
+          <b>Paneer Butter Masala</b>
+          <small>Classic special paneer</small>
+        </div>
+
+        <div class="price">
+          ₹275
+        </div>
+
+      </div>
+
+
+      <div class="dish main">
+
+        <div>
+          <b>Paneer Lababdar Lagaan</b>
+          <small>Classic special paneer</small>
+        </div>
+
+        <div class="price">
+          ₹303
+        </div>
+
+      </div>
+
+
+      <div class="dish main">
+
+        <div>
+          <b>Veg Maratha</b>
+          <small>Main course</small>
+        </div>
+
+        <div class="price">
+          ₹225
+        </div>
+
+      </div>
+
+
+      <div class="dish main">
+
+        <div>
+          <b>Aamantran Special</b>
+          <small>Chef special section</small>
+        </div>
+
+        <div class="price">
+          ₹499
+        </div>
+
+      </div>
+
+
+      <div class="dish rice">
+
+        <div>
+          <b>Veg Fried Rice</b>
+          <small>Chinese rice</small>
+        </div>
+
+        <div class="price">
+          ₹182
+        </div>
+
+      </div>
+
+
+      <div class="dish rice">
+
+        <div>
+          <b>Singapore Fried Rice</b>
+          <small>Chinese rice</small>
+        </div>
+
+        <div class="price">
+          ₹195
+        </div>
+
+      </div>
+
+
+      <div class="dish rice">
+
+        <div>
+          <b>Veg Hakka Noodle</b>
+          <small>Chinese noodles</small>
+        </div>
+
+        <div class="price">
+          ₹222
+        </div>
+
+      </div>
+
+
+      <div class="dish rice">
+
+        <div>
+          <b>Veg Dum Biryani</b>
+          <small>Basmati rice</small>
+        </div>
+
+        <div class="price">
+          ₹235
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="wrap">
+
+    <div class="cta">
+
+      <div
+        class="eyebrow"
+        style="color:#e0a66d">
+        Visit / enquire
+      </div>
+
+      <h2>
+        Make it easy to choose Aamantran.
+      </h2>
+
+      <p>
+        Call the restaurant, open the location or send a WhatsApp
+        enquiry without searching through multiple apps.
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          class="btn gold"
+          href="tel:+919373456899">
+          📞 Call
+        </a>
+
+
+        <a
+          class="btn outline"
+          target="_blank"
+          href="https://wa.me/919373456899?text=Hi%20Aamantran%20Garden%20Restaurant%2C%20I%27d%20like%20to%20make%20an%20enquiry.">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="contact">
+
+
+      <!-- BUSINESS DETAILS -->
+
+      <div class="box">
+
+        <div class="eyebrow">
+          Business details
+        </div>
+
+
+        <div class="info">
+
+          <div>
+
+            <b>
+              📍 Address
+            </b>
+
+            <span>
+              Chatrapati Chowk, More Chowk Road,
+              Nanded, Maharashtra 431605
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <b>
+              🕚 Hours
+            </b>
+
+            <span>
+              Public listings show approximately
+              11:00 AM – 11:00 PM daily;
+              confirm with owner.
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <b>
+              📞 Phone
+            </b>
+
+            <span>
+              +91 93734 56899
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="map">
+
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Aamantran+Garden+Restaurant+Chatrapati+Chowk+More+Chowk+Road+Nanded">
+
+            📍 Open location in Google Maps
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- WHATSAPP FORM -->
+
+      <div class="box">
+
+        <div class="eyebrow">
+          Quick enquiry
+        </div>
+
+
+        <form
+          onsubmit="sendWhatsApp(event)">
+
+          <input
+            id="name"
+            required
+            placeholder="Your name">
+
+
+          <input
+            id="phone"
+            required
+            placeholder="Phone number">
+
+
+          <textarea
+            id="msg"
+            required
+            placeholder="What would you like to ask?"></textarea>
+
+
+          <button
+            class="btn gold"
+            type="submit">
+
+            Send on WhatsApp
+
+          </button>
+
+        </form>
+
+
+        <p class="note">
+          Working demo: the form opens WhatsApp with the
+          customer's message. No database/backend is required.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="wrap foot">
+
+    <div>
+      <b>
+        Aamantran Garden Restaurant
+      </b>
+      • Nanded
+    </div>
+
+    <div>
+      Demo media should be replaced with owner-approved
+      assets before commercial launch.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="float"
+  target="_blank"
+  href="https://wa.me/919373456899?text=Hi%20Aamantran%20Garden%20Restaurant%2C%20I%27d%20like%20to%20make%20an%20enquiry.">
+
+  WhatsApp
+
+</a>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function filterMenu(type,btn){
+
+  document
+    .querySelectorAll('.tab')
+    .forEach(x =>
+      x.classList.remove('active')
+    );
+
+  btn.classList.add('active');
+
+
+  document
+    .querySelectorAll('.dish')
+    .forEach(x => {
+
+      x.style.display =
+        (type === 'all' ||
+         x.classList.contains(type))
+        ? 'flex'
+        : 'none';
+
+    });
+
+}
+
+
+function sendWhatsApp(e){
+
+  e.preventDefault();
+
+
+  const customerName =
+    document.getElementById('name').value;
+
+  const customerPhone =
+    document.getElementById('phone').value;
+
+  const message =
+    document.getElementById('msg').value;
+
+
+  const text =
+    'Hi Aamantran Garden Restaurant, ' +
+    'my name is ' +
+    customerName +
+    '. My phone is ' +
+    customerPhone +
+    '. ' +
+    message;
+
+
+  window.open(
+    'https://wa.me/919373456899?text=' +
+    encodeURIComponent(text),
+    '_blank'
+  );
+
+}
+
+</script>
+
+</body>
+</html>
